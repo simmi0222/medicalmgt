@@ -1,0 +1,21 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<div class="container w-50 mt-5 shadow-lg">
+    <form class="form-control fs-3 border-0" action="/update/<%= updtTablets._id%>" method="post">
+        <h1 class="text-center">Update Details</h1>
+
+        <h2 class="fs-3 mt-3 fw-medium">Medicine Name -<input class="form-control mt-2 fs-3 border-dark text-primary"  type="text" name="tabletname" placeholder="Medicine Name" value="<%= updtTablets.tabletname%>"></h2>
+
+        <h2 class="fs-3 mt-3">Medicine Type -<input class="form-control mt-2 fs-3 border-dark text-primary"  type="text" name="tablettype" placeholder="Medicine Type" value="<%= updtTablets.tablettype%>"></h2>
+
+       <h2 class="fs-3 mt-3">Cost Per Item - <input class="form-control mt-2 fs-3 border-dark text-primary"  type="text" name="cost" placeholder="Cost Per Item" value="<%= updtTablets.cost%>"></h2>
+
+        <h2 class="fs-3 mt-3">Description -<input class="form-control mt-2 fs-3 border-dark text-primary"  type="text" name="description" placeholder="Description" value="<%= updtTablets.description%>"></h2>
+
+        <button class="buttons btn btn-success mt-4 fs-3 pe-5 ps-5">Update</button>
+
+    </form>
+</div>
+
+<%- include("partials/footer")%>

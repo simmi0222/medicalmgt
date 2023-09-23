@@ -1,0 +1,20 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<div class="container mt-5 w-50 shadow-lg">
+    <form class="form-control fs-3 border-0" action="/add-tablets" method="post">
+        <h1 class="text-center">Add New Medicine</h1>
+        <hr>
+        <h2 class="fs-3 mt-3 fw-medium">Medicine Name -<input class="form-control mt-1 fs-3 text-danger border-dark" type="text" name="tabletname" placeholder="enter medicine Name"></h2>
+
+        <h2 class="fs-3 mt-3 fw-medium">Medicine Type -<input class="form-control mt-1 fs-3 text-danger border-dark" type="text" name="tablettype" placeholder="enter medicine Type"></h2>
+
+        <h2 class="fs-3 mt-3 fw-medium">Cost Per Item -<input class="form-control mt-1 fs-3 text-danger border-dark" type="text" name="cost" placeholder="enter cost per item"></h2>
+
+        <h2 class="fs-3 mt-3 fw-medium">Description -<input class="form-control mt-1 fs-3 text-danger border-dark" type="text" name="description" placeholder="enter medicine description"></h2>
+
+        <button class="buttons mt-4 btn btn-primary fs-3 ps-5 pe-5">Add</button>
+    </form>
+</div>
+
+<%- include("partials/footer")%>

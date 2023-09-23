@@ -1,0 +1,59 @@
+<%- include("partials/header")%>
+
+<div>
+    <nav class="d-flex justify-content-between container shadow-lg">
+        <h1 class="mt-2 ps-3 text-primary">PHARMACY STORE🏥</h1>
+        <ul class="d-flex list-unstyled gap-5 mt-2 pe-3">
+            <li><a class="fs-3 text-decoration-none" href="/">Home</a></li>
+            <li><a class="fs-3 text-decoration-none" href="/sign-out">Sign Out</a></li>
+            
+        </ul>
+    </nav>
+</div>
+  <h2 class="text-end mt-4"><a class="text-decoration-none pe-5 me-5" href="/add-tablets">Add➕</a></h2>
+<div class="container w-100 shadow mt-1">
+   <h1 class="text-center">All Medicine List</h1>
+
+       <table class="w-100">
+        <tr>
+            <th>Medicine Name</th>
+            <th>Medicine type</th>
+            <th>Cost Per Item</th>
+            <th>Description</th>
+            <th>Edit </th>
+        </tr>
+        <% tablets.forEach((tablet)=>{%>
+           
+       
+        <tr>
+            <td><%=tablet.tabletname%></td>
+            <td><%=tablet.tablettype%></td>
+            <td><%=tablet.cost%></td>
+            <td><%=tablet.description%></td>
+            <td><a class="text-decoration-none" href="/update/<%= tablet._id%>">✏️</a> <a class="text-decoration-none" href="/delete/<%= tablet._id%>">❌ </a></td>
+        </tr>
+        
+    <%})%>
+       </table>
+
+    </div>
+    <!-- <form action="/all-tablets">
+        <ul class="list-unstyled d-flex">
+            <% tablets.forEach((tablet)=>{%>
+
+            
+            <li class="d-flex">
+                <h4><span class="fw-bold">Medicine Name :-  </span> &nbsp;<span class="text-primary"><%=tablet.tabletname%></span></h4>
+                <h4><span class="fw-bold">Medicine Type :-  </span> &nbsp;<%=tablet.tablettype%></h4>
+                <h4><span class="fw-bold">Cost Per Item :-  </span> &nbsp;<%=tablet.cost%></h4>
+                <h4><span class="fw-bold">Description :-    </span> &nbsp;<%=tablet.description%></h4>
+            </li>
+            <a href="/update/<%= tablet._id%>">✏️</a>
+            <a href="/delete/<%= tablet._id%>">❌</a>
+            
+        <%})%>
+        </ul>
+    </form> -->
+
+
+<%- include("partials/footer")%>
